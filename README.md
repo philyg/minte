@@ -1,5 +1,9 @@
 # MinTE - The most minimal template engine.
 
+![Build Status](https://github.com/philyg/minte/actions/workflows/build.yml/badge.svg)
+![License](https://img.shields.io/github/license/philyg/minte)
+![Release](https://img.shields.io/github/v/release/philyg/minte)
+
 https://github.com/philyg/minte
 
 ## Motivation
@@ -34,9 +38,8 @@ Building should be as easy as `make`. Run `make help` to get more information:
 ````
 To compile dynamically linked use:  make
 To compile statically  linked use:  make CFLAGS=-static
-To install to /user/local/bin use:  make install
+To install to /usr/local/bin  use:  make install
 To install to a custom prefix use:  make install PREFIX=[your prefix]
-
 ````
 
 ### Running
@@ -83,7 +86,7 @@ Usage: minte [-a VAR1,...] [-i VAR1,...] [-n] [-s value] [-e value] [-c value]
 
 Think of this example docker configuration file:
 
-````
+````json
 {
     "default-address-pools": [
         {
@@ -109,7 +112,7 @@ We would like to be able to easily set the base and size parameters through envi
 
 Piping this file through `NETBASE=172.16.18.0/24 NETSIZE=28 ./minte -s {: -e :}` yields:
 
-````
+````json
 {
     "default-address-pools": [
         {

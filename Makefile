@@ -12,7 +12,7 @@ all: bin/minte
 help:
 	@echo "To compile dynamically linked use:  make"
 	@echo "To compile statically  linked use:  make CFLAGS=-static"
-	@echo "To install to /user/local/bin use:  make install"
+	@echo "To install to /usr/local/bin  use:  make install"
 	@echo "To install to a custom prefix use:  make install PREFIX=[your prefix]"
 
 bin/minte: src/minte.cpp ${HEADERS}
