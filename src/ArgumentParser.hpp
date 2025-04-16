@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Settings.hpp"
+#include "Version.hpp"
 
 class ArgumentParser
 {
@@ -38,8 +39,8 @@ public:
 
     [[noreturn]] static void Usage()
     {
+        std::cerr << std::endl << "MinTE - The most minimal template engine, version " << VERSION << ".";
         std::cerr << R"usage(
-MinTE - The most minimal template engine.
 Copyright (c) 2025 Philipp Grassl
 https://github.com/philyg/minte
 
